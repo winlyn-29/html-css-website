@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capybara Wonderland - Princess Winlyn Yu</title>
+    <style>
+        /* General Body and Layout Styling */
+        body {
+            font-family: 'Cursive', 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle, rgba(255, 215, 168, 1) 0%, rgba(255, 140, 124, 1) 100%);
+            color: #4e4e4e;
+            text-align: center;
+            transition: background 0.5s ease;
+        }
+
+        header {
+            background-color: rgba(255, 99, 71, 0.9);
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            border-bottom: 5px solid rgba(255, 99, 71, 1);
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
+        }
+
+        h1 {
+            font-size: 4.5em;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.5em;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        nav {
+            background-color: #ff6347;
+            overflow: hidden;
+            border-bottom: 5px solid #ff4500;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #ff4500;
+            transform: scale(1.1);
+        }
+
+        .content {
+            padding: 50px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+            margin-top: 30px;
+            display: none;
+        }
+
+        .content h2 {
+            color: #ff6347;
+            font-size: 3em;
+            text-decoration: underline;
+            font-weight: bold;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+        }
+
+        .content img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 15px;
+            margin: 20px 0;
+            transition: transform 0.5s ease;
+        }
+
+        .content img:hover {
+            transform: scale(1.05);
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            background-color: #ff6347;
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        .tab {
+            background-color: #ff6347;
+            color: white;
+            padding: 20px 40px;
+            margin: 0 15px;
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .tab:hover {
+            background-color: #ff4500;
+            transform: scale(1.1);
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 30px 0;
+            font-size: 1.5em;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            font-weight: bold;
+            box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🌿 Welcome to the Capybara Wonderland 🦦</h1>
+        <p>Explore the Gentle Giants of South America</p>
+    </header>
+
+    <!-- Navigation Bar (Tabs) -->
+    <nav>
+        <a href="#" class="tab" id="aboutTab">About Capybaras</a>
+        <a href="#" class="tab" id="habitatTab">Habitat</a>
+        <a href="#" class="tab" id="dietTab">Diet</a>
+        <a href="#" class="tab" id="funFactsTab">Fun Facts</a>
+    </nav>
+
+    <!-- About Capybaras Section -->
+    <div id="about" class="content">
+        <h2>About Capybaras</h2>
+        <img src="1.jpg">
+        <p>The capybara is the world's largest rodent, reaching up to 4.5 feet in length and weighing between 100 to 150 pounds. These gentle creatures are native to South America, where they are commonly found in the wild in places like Venezuela, Colombia, and Brazil. Capybaras are semiaquatic animals that thrive in habitats near rivers, lakes, and wetlands. They are highly social creatures and typically live in large groups of up to 40 individuals.</p>
+        <img src="8ce26dbdb4db3c173401919f0a77e728istock-capybara.jpg">
+        <p>Despite their large size, capybaras are very calm and non-aggressive. They have webbed feet that help them navigate through water efficiently, and they are also strong swimmers. Capybaras are herbivores and graze on grass and other vegetation found near the water's edge. Their social structure and friendly demeanor make them a favorite among other animals and even humans.</p>
+        <img src="Capybara-Family.jpg">
+        <p>Capybaras communicate with each other through various vocalizations, including barks, whistles, and clicks. Their docile nature makes them a popular animal in zoos and wildlife reserves worldwide. Because of their strong social bonds and placid nature, capybaras are often seen as the "dogs of the rodent world." They are admired for their relaxed and easygoing attitude, even around potential threats.</p>
+    </div>
+
+    <!-- Capybara Habitat Section -->
+    <div id="habitat" class="content">
+        <h2>Capybara Habitat</h2>
+        <img src="images.jpg">
+        <p>Capybaras are native to South America, and they are found in diverse environments ranging from forests and grasslands to wetlands and marshes. These habitats are typically near bodies of freshwater, such as rivers, lakes, and swamps, which provide them with the necessary resources to thrive. The capybara’s strong affinity for water makes aquatic environments essential to its survival.</p>
+        <img src="bae0c1de0cf2e3dbbec309eb786b4c85.jpg.webp">
+        <p>The presence of water is crucial for capybaras as it provides them with a cooling effect during hot weather, as well as a place to swim and escape predators. These creatures are also excellent swimmers and often dive underwater to evade threats. Additionally, the wetland areas where they live provide plenty of vegetation for their herbivorous diet.</p>
+        <img src="2556852832_d9dbb07502_o-1260x708.webp">
+        <p>In the wild, capybaras prefer dense vegetation along riverbanks or lakeshores, where they can find ample grazing opportunities. They also make burrows or nests along the water's edge to rest and keep safe from predators like jaguars and anacondas. Their calm behavior allows them to coexist peacefully with other wildlife in these ecosystems, from birds to monkeys, making capybara habitats vital to biodiversity.</p>
+    </div>
+
+    <!-- Capybara Diet Section -->
+    <div id="diet" class="content">
+        <h2>Capybara Diet</h2>
+        <img src="cool-looking-capybara-zoo-chewing-600nw-2472184835.webp">
+        <p>Capybaras are herbivores, feeding primarily on grasses, aquatic plants, and fruits. Their diet is rich in fiber, which helps them maintain a healthy digestive system. These animals are known to graze throughout the day, consuming large amounts of vegetation to meet their nutritional needs. Their teeth continuously grow, so chewing tough plants helps wear them down naturally.</p>
+        <img src="istockphoto-1394743103-612x612.jpg">
+        <p>Besides grass, capybaras also enjoy eating leaves, seeds, and the bark of trees, depending on what’s available in their environment. They are opportunistic feeders and will munch on whatever vegetation they can find. In areas where water is abundant, capybaras may even feed on aquatic plants such as water lilies and grasses that grow along the water’s edge.</p>
+        <img src="maxresdefault.jpg">
+        <p>Capybaras' diet can vary depending on the region they inhabit and the season. In some areas, they may also feed on certain fruits and vegetables, but the core of their diet consists of grass and other leafy plants. Despite their large size, capybaras have a relatively simple diet, making them highly adapted to their environment and capable of thriving in the wild.</p>
+    </div>
+
+    <!-- Fun Facts Section -->
+    <div id="funFacts" class="content">
+        <h2>Fun Facts about Capybaras</h2>
+        <img src="photo_2023-08-04_13-24-04.jpg">
+        <p>Capybaras are famous for their calm and friendly nature, which allows them to form strong bonds with other animals. It is not uncommon for capybaras to befriend other species, such as birds, monkeys, and even dogs! Their social demeanor and willingness to interact make them beloved by zoo visitors worldwide.</p>
+        <img src="4203D62400000578-0-image-a-48_1499161248603.jpg">
+        <p>These gentle giants have been known to enjoy "group baths" in water, where they all gather together to cool off. They are highly social animals, and even in the wild, they tend to live in large groups. This social structure provides safety and security for each individual, as they work together to alert the group of any potential dangers.</p>
+        <img src="skipper-facebook-2-e1598827541129.webp">
+        <p>Capybaras have a unique form of communication, making a variety of sounds such as purrs, whistles, and barks to communicate with each other. Interestingly, they also sleep in a group and often rest together in a pile, demonstrating their close-knit social bonds. It's these behaviors that make capybaras a symbol of peaceful coexistence in the animal kingdom.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Created by Princess Winlyn Yu 🌟</p>
+    </footer>
+
+    <script>
+        const aboutTab = document.getElementById('aboutTab');
+        const habitatTab = document.getElementById('habitatTab');
+        const dietTab = document.getElementById('dietTab');
+        const funFactsTab = document.getElementById('funFactsTab');
+
+        const aboutContent = document.getElementById('about');
+        const habitatContent = document.getElementById('habitat');
+        const dietContent = document.getElementById('diet');
+        const funFactsContent = document.getElementById('funFacts');
+
+        function showContent(contentToShow) {
+            aboutContent.style.display = 'none';
+            habitatContent.style.display = 'none';
+            dietContent.style.display = 'none';
+            funFactsContent.style.display = 'none';
+            contentToShow.style.display = 'block';
+        }
+
+        aboutTab.addEventListener('click', () => showContent(aboutContent));
+        habitatTab.addEventListener('click', () => showContent(habitatContent));
+        dietTab.addEventListener('click', () => showContent(dietContent));
+        funFactsTab.addEventListener('click', () => showContent(funFactsContent));
+
+        showContent(aboutContent);
+    </script>
+</body>
+</html>

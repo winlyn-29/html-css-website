@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capybara Wonderland - Princess Winlyn Yu</title>
+    <style>
+        /* General Body and Layout Styling */
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ffafbd, #ffc3a0);
+            color: #333;
+            text-align: center;
+            transition: background 0.5s ease;
+        }
+
+        header {
+            background-color: #ff6347;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 4em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        nav {
+            background-color: #ff6347;
+            overflow: hidden;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #ff4500;
+        }
+
+        .content {
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+
+        .content h2 {
+            color: #ff6347;
+            font-size: 2.5em;
+            text-decoration: underline;
+        }
+
+        .content img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .tab {
+            background-color: #ff6347;
+            color: white;
+            padding: 15px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .tab:hover {
+            background-color: #ff4500;
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            font-size: 1.2em;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Transitions */
+        .transition {
+            transition: all 0.5s ease;
+        }
+
+        .highlight {
+            color: #ff6347;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .tabs {
+                flex-direction: column;
+                padding: 10px;
+            }
+            .tab {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🌿 Welcome to the Capybara Wonderland 🦦</h1>
+        <p>Explore the World of Capybaras: The Gentle Giants!</p>
+    </header>
+
+    <!-- Navigation Bar (Tabs) -->
+    <nav>
+        <a href="#" class="tab" id="aboutTab">About Capybaras</a>
+        <a href="#" class="tab" id="habitatTab">Habitat</a>
+        <a href="#" class="tab" id="dietTab">Diet</a>
+        <a href="#" class="tab" id="funFactsTab">Fun Facts</a>
+    </nav>
+
+    <div id="about" class="content">
+        <h2>About Capybaras</h2>
+        <img src="https://images.unsplash.com/photo-1601506022071-fd17a1b5f4b9" alt="Capybara Image">
+        <p>The Capybara is the largest rodent in the world, native to South America. These friendly creatures live in groups and are known for their calm and gentle nature. They are semi-aquatic animals, which means they love to spend time in water.</p>
+    </div>
+
+    <div id="habitat" class="content" style="display: none;">
+        <h2>Capybara Habitat</h2>
+        <img src="https://images.unsplash.com/photo-1601696126724-9ad53f6b79da" alt="Capybara in Water">
+        <p>Capybaras are found in the wild in a range of habitats, including forests, grasslands, and wetlands, particularly in regions close to rivers, lakes, or marshes. They prefer areas with access to water, where they can cool off and hide from predators.</p>
+    </div>
+
+    <div id="diet" class="content" style="display: none;">
+        <h2>Capybara Diet</h2>
+        <img src="https://images.unsplash.com/photo-1572084962670-d13f358632b5" alt="Capybara Eating">
+        <p>Capybaras are herbivores, mainly eating grasses and aquatic plants. They also consume fruits and vegetables when available. They are known to graze in the early morning or late afternoon, and they have a strong preference for fresh, tender vegetation.</p>
+    </div>
+
+    <div id="funFacts" class="content" style="display: none;">
+        <h2>Fun Facts About Capybaras</h2>
+        <img src="https://images.unsplash.com/photo-1591183888297-b6e5f02fe84b" alt="Capybara Socializing">
+        <p>Capybaras are extremely social animals and are often found in groups of 10-20 individuals. They enjoy being around other animals and are often seen interacting with other species, including birds and even smaller mammals. They are also known for their calm demeanor, making them a favorite in zoos and sanctuaries worldwide.</p>
+    </div>
+
+    <footer class="footer">
+        <p>Created by Princess Winlyn Yu 🌟</p>
+    </footer>
+
+    <script>
+        // Tab Navigation Script
+        const aboutTab = document.getElementById('aboutTab');
+        const habitatTab = document.getElementById('habitatTab');
+        const dietTab = document.getElementById('dietTab');
+        const funFactsTab = document.getElementById('funFactsTab');
+
+        const aboutContent = document.getElementById('about');
+        const habitatContent = document.getElementById('habitat');
+        const dietContent = document.getElementById('diet');
+        const funFactsContent = document.getElementById('funFacts');
+
+        // Function to show content based on the tab clicked
+        function showContent(contentToShow) {
+            aboutContent.style.display = 'none';
+            habitatContent.style.display = 'none';
+            dietContent.style.display = 'none';
+            funFactsContent.style.display = 'none';
+            
+            contentToShow.style.display = 'block';
+        }
+
+        // Add event listeners for tabs
+        aboutTab.addEventListener('click', () => showContent(aboutContent));
+        habitatTab.addEventListener('click', () => showContent(habitatContent));
+        dietTab.addEventListener('click', () => showContent(dietContent));
+        funFactsTab.addEventListener('click', () => showContent(funFactsContent));
+
+        // Show the "About" tab by default
+        showContent(aboutContent);
+    </script>
+
+</body>
+</html>
